@@ -27,7 +27,7 @@ const showMessage = (message) => {
 
 checkNumberBtn.addEventListener('click',() => {
     const dob = dateOfBirth.value;const number = Number(luckyNumber.value);
-    if(dob && number) {
+    if(dob && number > 0) {
         const sum = calculateSum(dob);
         checkIsNumberLucky(sum, number);
     } else {

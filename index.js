@@ -26,12 +26,12 @@ const showMessage = (message) => {
 };
 
 checkNumberBtn.addEventListener('click',() => {
-    const dob = dateOfBirth.value;const number = luckyNumber.value;
+    const dob = dateOfBirth.value;const number = Number(luckyNumber.value);
     if(dob && number) {
         const sum = calculateSum(dob);
         checkIsNumberLucky(sum, number);
     } else {
-        showMessage("Please enter both the fields!!");
+        showMessage("Please enter both the fields and number should be greater than 0!!");
     }
 });
 

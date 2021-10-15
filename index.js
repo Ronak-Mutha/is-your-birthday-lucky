@@ -9,13 +9,13 @@ const calculateSum = (dob) => {
     console.log(dob);
     for (let digit of dob) {
         sum = sum + Number(digit);
-      }
+    }
     return sum;
 };
 
 const checkIsNumberLucky = (sum, number) => {
     console.log(sum, number);
-    if( sum % number == 0) {
+    if (sum % number == 0) {
         return showMessage(`${number} is a lucky number!! 🥳 🥳 🥳 `);
     }
     showMessage(`${number} is not that lucky 😕`);
@@ -25,13 +25,13 @@ const showMessage = (message) => {
     displayMessage.innerText = message;
 };
 
-checkNumberBtn.addEventListener('click',() => {
-    const dob = dateOfBirth.value;const number = Number(luckyNumber.value);
-    if(dob && number > 0) {
+checkNumberBtn.addEventListener('click', () => {
+    const dob = dateOfBirth.value;
+    const number = Number(luckyNumber.value);
+    if (dob && number > 0) {
         const sum = calculateSum(dob);
         checkIsNumberLucky(sum, number);
     } else {
         showMessage("Please enter both the fields and number should be greater than 0!!");
     }
 });
-
